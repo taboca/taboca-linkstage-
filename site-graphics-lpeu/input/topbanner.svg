@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="110" view=" 0 0 800 110"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
 
 <defs>
 	  <filter id="filter" filterRes="1100" x="0" y="0">
                <feGaussianBlur stdDeviation="2 2"/>
                <feOffset dx="2" dy="2"/>
           </filter>
+	<image id="backgroundImage" x="0" y="0" width="800" height="600"  xlink:href="test.jpg" />
+   	<mask id="Mask">
+	<rect   x="0" y="0" rx="10" ry="10" width="780" height="100" style="fill: white; stroke: black; "/>
+	</mask>
 </defs> 
 
-<rect x="20" y="20" rx="10" ry="10" width="800" height="100" filter="url(#filter)" style="fill: black; stroke: black; "/>
-<rect x="20" y="20" rx="10" ry="10" width="800" height="100" style="fill: white; stroke: black; "/>
+<rect x="0" y="0" rx="10" ry="10" width="780" height="100" filter="url(#filter)" style="fill: black; stroke: black; "/>
+<use xlink:href="#backgroundImage" mask="url(#Mask)" />
+<rect   x="0" y="0" rx="10" ry="10" width="780" height="100" style="fill: none; stroke: black; "/>
 
 </svg>
