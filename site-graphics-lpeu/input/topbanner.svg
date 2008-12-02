@@ -10,24 +10,18 @@
                <feGaussianBlur stdDeviation="2 2"/>
               <feOffset dx="2" dy="2"/>
   </filter>
-	<image id="backgroundImage2" x="0" y="0" width="800" height="600"  xlink:href="fullbackground.svg" />
 	<image id="backgroundImage" x="0" y="0" width="800" height="600"  xlink:href="wavebackground.svg" />
-	<image id="3dshade" x="0" y="0" width="800" height="600"  xlink:href="3dshade.svg" />
+	<image id="backgroundImage2" x="0" y="0" width="800" height="600"  xlink:href="fullbackground.svg" />
    	<mask id="Mask">
 	<rect x="0" y="0" rx="10" ry="10" width="780" height="100" style="fill: white; stroke: black; "/>
 	</mask>
-	<filter id="blurbasic" filterRes="200">
-	<feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
-	</filter>
-
 </defs> 
 
 <rect x="0" y="0" rx="10" ry="10" width="780" height="100" filter="url(#filter)" style="fill: black; stroke: black; "/>
 <use xlink:href="#backgroundImage2" mask="url(#Mask)" />
-<use xlink:href="#backgroundImage" mask="url(#Mask)" style="opacity:.5" />
-<use xlink:href="#3dshade" mask="url(#Mask)" />
- 
-<image  x="0" y="0" width="800" height="200"  xlink:href="toptext.svg" filter="url(#blurbasic)" />
+<use xlink:href="#backgroundImage" mask="url(#Mask)" />
+<rect   x="0" y="0" rx="10" ry="10" width="780" height="100" class="bannertop" />
+<image  x="0" y="0" width="800" height="200"  xlink:href="toptext.svg" />
 <image  x="0" y="0" width="800" height="200"  xlink:href="toptext.svg" />
 
 </svg>
